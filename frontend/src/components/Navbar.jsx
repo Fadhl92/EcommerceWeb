@@ -52,6 +52,7 @@ const Center = styled.div`
 const Logo = styled.h1`
   font-weight: bold;
   ${mobile({ fontSize: "24px" })}
+  cursor: pointer;
 `;
 const Right = styled.div`
   flex: 1;
@@ -59,12 +60,14 @@ const Right = styled.div`
   align-items: center;
   justify-content: flex-end;
   ${mobile({ flex: 2, justifyContent: "center" })}
+  
 `;
 
 const MenuItem = styled.div`
   font-size: 14px;
   cursor: pointer;
   margin-left: 25px;
+
   ${mobile({ fontSize: "12px", marginLeft: "10px" })}
 `;
 
@@ -81,12 +84,19 @@ const Navbar = () => {
           </SearchContainer>
         </Left>
         <Center>
-          <Logo>StyleOver.</Logo>
+        <Link to ="/" style={{ textDecoration: 'none' }}>
+          <Logo >StyleOver.</Logo>
+          </Link>
         </Center>
+        
         <Right>
-          <MenuItem>REGISTER</MenuItem>
+         <Link to ="/register"  style={{ textDecoration: 'none' }}  >
+          <MenuItem >REGISTER</MenuItem>
+          </Link>
+          <Link to ="/login"  style={{ textDecoration: 'none' }} >
           <MenuItem>SIGN IN</MenuItem>
-          <Link to="/cart">
+          </Link>
+          <Link to="/cart" >
           <MenuItem>
             <Badge badgeContent={quantity} color="primary">
               <ShoppingCartOutlined />
@@ -94,6 +104,7 @@ const Navbar = () => {
           </MenuItem>
           </Link>
         </Right>
+       
       </Wrapper>
     </Container>
   );

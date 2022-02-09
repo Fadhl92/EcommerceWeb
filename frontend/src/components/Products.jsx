@@ -33,6 +33,7 @@ const Products = ({ cat, filters, sort }) => {
     cat &&
       setFilteredProducts(
         products.filter((item) =>
+         // if item key includes the value we can fillter it
           Object.entries(filters).every(([key, value]) =>
             item[key].includes(value)
           )
