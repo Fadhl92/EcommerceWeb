@@ -15,7 +15,7 @@ import Cart from "./pages/Cart";
 import Success from "./pages/Success";
 import { useSelector } from "react-redux";
 const App = () => {
-  const user = useSelector((state) => state.user.currentUser);
+   
   return (
     <BrowserRouter>
     <Routes>
@@ -27,11 +27,10 @@ const App = () => {
       <Route  path="/cart" element={<Cart />}> </Route>
       <Route path="/success" element={<Success/>}> </Route>
     
-      <Route exact path="/login" element={<Login/>}>
+      <Route path="/login" element={<Login/>}></Route>
       <Route path="/register" element={<Register/>}> </Route>
         
-         </Route>
-      <Route path="/register"  element= {<Register/>}> </Route>
+       
   
  
    

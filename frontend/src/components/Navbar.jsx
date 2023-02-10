@@ -5,6 +5,8 @@ import styled from "styled-components";
 import { mobile } from "../responsive";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { navbar } from "../data";
+ 
 
 const Container = styled.div`
   height: 60px;
@@ -71,7 +73,18 @@ const MenuItem = styled.div`
   ${mobile({ fontSize: "12px", marginLeft: "10px" })}
 `;
 
-const Navbar = () => {
+const ImgContainer = styled.div`
+  height: 100%;
+  flex: 1;
+`;
+
+const Image = styled.img`
+  height: 1%;
+`;
+
+
+
+const Navbar = ()=> {
   const quantity = useSelector(state=>state.cart.quantity)
   return (
     <Container>
@@ -84,9 +97,11 @@ const Navbar = () => {
           </SearchContainer>
         </Left>
         <Center>
-        <Link to ="/" style={{ textDecoration: 'none' }}>
-          <Logo >StyleOver.</Logo>
-          </Link>
+        
+          <Logo >GooGy SHoPy
+           
+             
+              </Logo>
         </Center>
         
         <Right>

@@ -3,6 +3,7 @@ import { useState } from "react";
 import styled from "styled-components";
 import { sliderItems } from "../data";
 import { mobile } from "../responsive";
+ 
 
 const Container = styled.div`
   width: 100%;
@@ -93,6 +94,7 @@ const Slider = () => {
     <Container>
       <Arrow direction="left" onClick={() => handleClick("left")}>
         <ArrowLeftOutlined />
+        
       </Arrow>
       <Wrapper slideIndex={slideIndex}>
         {sliderItems.map((item) => (
@@ -103,7 +105,7 @@ const Slider = () => {
             <InfoContainer>
               <Title>{item.title}</Title>
               <Desc>{item.desc}</Desc>
-              <Button>SHOW NOW</Button>
+              <Button>SHOP NOW</Button>
             </InfoContainer>
           </Slide>
         ))}
